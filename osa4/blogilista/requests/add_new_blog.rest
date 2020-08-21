@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdicnVzaCIsImlkIjoiNWYzYzBlYTUyZDMxM2I0MmYwNzllOTg0IiwiaWF0IjoxNTk3NzgxMDQ3fQ.vJeD9fgxUa0VrrD6foqDOuyoOkpGAnCHWxXhxBRPMi0
+
+{
+    "title": "The Joy of Hex",
+    "author": "Voodoo Lady",
+    "url": "http://blog.cleancoder.com/uncle-bob/2016/05/01/TypeWars.html",
+    "likes": 2
+}
