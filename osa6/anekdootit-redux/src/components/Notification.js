@@ -7,7 +7,6 @@ const Notification = (props) => {
     padding: 10,
     borderWidth: 1
   }
-  console.log('PROPSIT', props);
 
   if (props.notification === undefined) {
     return null;

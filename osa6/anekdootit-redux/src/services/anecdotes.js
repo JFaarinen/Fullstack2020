@@ -7,7 +7,7 @@ const getAll = async () => {
 }
 
 const createNew = async (anecdote) => {
-    console.log(anecdote);
+    //console.log(anecdote);
     const object = {
         content: anecdote,
         votes: 0
@@ -17,7 +17,7 @@ const createNew = async (anecdote) => {
 }
 
 const update = async (anecdote) => {
-    console.log(anecdote);
+    //console.log(anecdote);
     const object = {
         ...anecdote,
         votes: anecdote.votes + 1

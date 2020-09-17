@@ -1,8 +1,10 @@
+import { newTimer, clearTimer } from './timeoutReducer';
+
 const notificationReducer = (state = '', action) => {
 
     switch (action.type) {
         case 'NOTIFICATE':
-            console.log(action.notification);
+            //console.log(action.notification);
             return action.notification;
         case 'CLEAR_NOTIFICATION':
             return '';
@@ -25,16 +27,17 @@ export const clearNotification = () => {
 }
 
 export const timedNotification = (notification, time) => {
-    console.log(notification);
-    console.log(time);
     return async dispatch => {
+        dispatch(clearTimer());
+        const timer = window.setTimeout(() => {
+            dispatch({ type: 'CLEAR_NOTIFICATION' })
+        }, time * 1000);
         dispatch({
             type: 'NOTIFICATE',
             notification: { notification }
         });
-        setTimeout(() => {
-            dispatch({ type: 'CLEAR_NOTIFICATION' })
-        }, time * 1000);
+        console.log('TIMER: ', timer);
+        dispatch(newTimer(timer));
     }
 }
 
